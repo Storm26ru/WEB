@@ -13,4 +13,19 @@ figure
     font-style:italic;
     font-size: 16px;
 }
-
+table 
+{
+    border-collapse: collapse;
+    table-layout: auto;
+    width: 100%;
+}
+.thead 
+{
+    background: #6b5fb5;
+    color:white;
+}
+td 
+{
+    border: 1px solid #aeaed3;
+    text-align:center;
+}
