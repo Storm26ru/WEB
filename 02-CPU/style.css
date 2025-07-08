@@ -29,3 +29,46 @@ td
     border: 1px solid #aeaed3;
     text-align:center;
 }
+blockquote 
+{
+    font-family: sans-serif;
+    font-style: italic;
+    position: relative;
+    line-height: 1.5em;
+    margin: 1em 0 1em 40px;
+}
+blockquote::before {
+    color: #ccc;
+    font-size: 62px;
+    content: "❝";
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -35px;
+}
+ul
+{
+    list-style-type:none;
+}
+a
+{
+    color: #7070b7;
+}
+li::before
+{
+    content: '\2022';
+    color: #7070b7;
+    /*display: inline-block;*/
+   margin-right: 5px;
+    /*position: absolute;*/
+    /*margin-left: -12px;*/
+}
+a:visited
+{
+   /*color:red;*/
+}
+/*a:hover
+{
+    font-weight:800;
+    background-color:darkblue;
+}*/
