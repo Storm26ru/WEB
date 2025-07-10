@@ -1,8 +1,98 @@
 ﻿body
 {
 }
+main
+{
+    background-color:aqua;
+    border:solid black;
+
+}
+
+    article {
+        display: flex;
+        flex-direction: column;
+        flex-basis:auto;
+        width:auto;
+        box-sizing: border-box;
+        border:solid black;
+        margin:10px;
+    }
 ol {
     display: grid;
     list-style-type: none;
-    grid-template-columns: 1em repeat(18, minmax(0, 1fr));
+    grid-template-columns: 1em repeat(18, minmax(10px, 1fr));
+    grid-gap: 2px 2px;
+    box-sizing: border-box;
+}
+div
+{
+    display:block;
+}
+.Group 
+{
+    text-align: center;
+}
+.Period
+{
+    align-self:center;
+    text-align:right;
+
+}
+.Group.Period
+{
+    user-select:none;
+    color: #003660;
+    line-height:1;
+
+}
+.Group>a
+{
+    font-size: 0.5em;
+    display: block;
+    text-decoration: inherit;
+}
+/*a:-webkit-any {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}*/
+/** {
+    box-sizing: border-box;
+}*/
+.Nonmetal {
+    background-color: hsl(120deg, 73%, 74%);
+}
+abbr
+{
+    font-size: 0.9em;
+    font-weight:600;
+
+}
+.Gas > abbr {
+    color: #900;
+}
+b 
+{
+    font-size: 0.65em;
+    font-weight: normal;
+}
+em, data {
+    font-size: 0.55em;
+    line-height: 0,5;
+ }
+
+ol {
+    transform: perspective(50em);
+}
+ol > li {
+    line-height: 1;
+    display: block;
+    font-style: normal;
+    font-weight: normal;
+    padding: 0.05rem;
+   /* white-space: nowrap;*/
+   
+}
+ul, ol {
+    /*padding-inline-start: 0;*/
 }
