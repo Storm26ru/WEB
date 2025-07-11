@@ -38,11 +38,32 @@ article > ol
     color: #003660;
     line-height: 1;
 }
-.Gas {
+.Gas 
+{
     color: #900;
 }
 .Nonmetal {
     background-color: hsl(120deg, 73%, 74%);
+}
+.Noble
+{
+    background-color: hsl(300deg, 44%, 82%);
+}
+.Alkali 
+{
+    background-color: hsl(48deg, 77%, 64%);
+}
+.Alkaline
+{
+    background-color: hsl(60deg, 83%, 67%);
+}
+.Metalloid 
+{
+    background-color: hsl(165deg, 58%, 76%);
+}
+.Poor
+{
+    background-color: hsl(192deg, 62%, 80%);
 }
 li {
     line-height: 0.9;
@@ -50,7 +71,7 @@ li {
     font-weight: normal;
     padding: 0.2rem;
     pointer-events: none;
-  }
+}
 em,data
 {
     font-size:0.8em;
@@ -66,5 +87,16 @@ abbr {
 }
 .EmptyRegion
 {
-    grid-column:3/19;
+    grid-column:4/14;
+    grid-row:2/5;
+}
+.EmptyRegion2
+{
+    grid-column:14/19
+}
+.Description > abbr
+{
+    font-size: 1em;
+    font-weight:600;
+    line-height:1.3;
 }
