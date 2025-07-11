@@ -42,6 +42,10 @@ article > ol
 {
     color: #900;
 }
+.Liquid
+{
+    color: #00D
+}
 .Nonmetal {
     background-color: hsl(120deg, 73%, 74%);
 }
@@ -64,6 +68,15 @@ article > ol
 .Poor
 {
     background-color: hsl(192deg, 62%, 80%);
+}
+.Transition
+{
+    background-color: hsl(12deg, 87%, 85%);
+}
+.Lanthanoid {
+    background-color: hsl(42deg, 62%, 76%);
+    grid-row-start: 10;
+    /*grid-column-start: 5;*/
 }
 li {
     line-height: 0.9;
@@ -99,4 +112,33 @@ abbr {
     font-size: 1em;
     font-weight:600;
     line-height:1.3;
+}
+.VerticalInner 
+{
+    grid-column-start: 4;
+    grid-row: 7/span 5;
+    background-color: #CEF;
+    border: solid #AAF;
+}
+.Label51-57 {
+    grid-column-start: 4;
+    grid-row-start: 7;
+    font-size: 0.9em;
+    align-self: center;
+    text-align: center;
+}
+.Label89-103 
+{
+    grid-column-start: 4;
+    grid-row-start: 8;
+    font-size: 0.9em;
+    align-self: center;
+    text-align: center;
+}
+.Period-Removed6 {
+    grid-column-start: 4;
+    grid-row-start: 10;
+    text-align: right;
+    align-self: center;
+    padding-right: 5px;
 }
