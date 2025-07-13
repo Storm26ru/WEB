@@ -1,0 +1,47 @@
+﻿body
+{
+    background-image:url('img/bliss.jpg');
+    background-size:cover;
+    font-family:Tahoma;
+}
+#main-window {
+    width:400px;
+    height:300px;
+}
+#title-bar
+{
+    background-color:blue;
+    width:400px;
+    height:32px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    color:white;
+    text-shadow:1px 1px 0px black;
+   
+}
+#client-rect
+{
+    width:400px;
+    height:268px;
+    background: rgb(236,233,216);
+}
+#title-bar, #window-icon-and-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#title-bar img
+{
+    width:24px;
+    height:24px;
+    margin:4px;
+}
+#window-control-buttons
+{
+    margin:5px 8px;
+}
+#window-control-buttons>input[tupe=button]
+{
+    width:24px;
+    height:24px;
+}
