@@ -99,6 +99,7 @@ li {
     padding: 0.2rem;
     pointer-events: none;
 }
+
 em,data
 {
     font-size:0.8em;
@@ -136,9 +137,13 @@ abbr {
     text-align:center;
 }
 .Description > abbr {
-    font-size: 1em;
+    font-size: 0.9em;
     font-weight: 600;
-    line-height: 1.3;
+    line-height: 1.4;
+}
+.Description > b 
+{
+    font-size:0.8em;
 }
 .VerticalInner 
 {
