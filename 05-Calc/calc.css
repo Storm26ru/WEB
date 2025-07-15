@@ -1,37 +1,43 @@
 ﻿body
 {
   background-image:url('img/bliss.jpg');
-  background-size:100% auto;
-  height:100%;
+  background-size:auto;
     font-family:Tahoma;
    
 }
 
 
 #main-window {
+    
     width:400px;
     height:300px;
+    display:flex;
+    flex-direction:column;
 }
 #title-bar
 {
     background-color:blue;
-    width:400px;
-    height:32px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     color:white;
     text-shadow:1px 1px 0px black;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
    
 }
 #client-rect
 {
-    width:400px;
-    height:268px;
     background: rgb(236,233,216);
+    display:flex;
+    flex-grow:1;
+    border:4px solid blue;
+    border-top:none;
+    
+   
 }
-#title-bar, #window-icon-and-title {
+#window-icon-and-title {
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 #title-bar img
@@ -40,12 +46,19 @@
     height:24px;
     margin:4px;
 }
-#window-control-buttons
-{
-    margin:5px 8px;
+#window-control-buttons {
+   margin-right:8px;
+    display:flex;
+    gap:0 2px;
 }
-#window-control-buttons>input[tupe=button]
-{
-    width:24px;
-    height:24px;
-}
+    #window-control-buttons > input[type=button] {
+        border-radius: 4px;
+        border: 2px solid white;
+        background-color: blue;
+        width: 24px;
+        height: 24px;
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+        text-align:center;
+    }
