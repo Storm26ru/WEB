@@ -1,9 +1,13 @@
 ﻿body
 {
-    background-image:url('img/bliss.jpg');
-    background-size:cover;
+  background-image:url('img/bliss.jpg');
+  background-size:100% auto;
+  height:100%;
     font-family:Tahoma;
+   
 }
+
+
 #main-window {
     width:400px;
     height:300px;
