@@ -15,18 +15,16 @@
     flex-direction: column;
 }
 
-#title-bar
-{
-    background-color:blue;
+#title-bar {
+    background: linear-gradient(to bottom,#1300e5, #026bfe);
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-    color:white;
-    text-shadow:1px 1px 0px black;
-    display:flex;
+    color: white;
+    text-shadow: 1px 1px 0px black;
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-basis:10%
-   
+    flex-basis: 10%
 }
 #title-bar img
 {
@@ -34,122 +32,160 @@
     height:30px;
     margin:4px;
 }
-#window-icon-and-title {
+#window-icon-and-title 
+{
     display: flex;
     align-items: center;
 }
-#window-control-buttons {
+#window-control-buttons 
+{
    margin-right:8px;
     display:flex;
     gap:0 2px;
+
 }
-#window-control-buttons > input[type=button]
+#window-control-buttons > input[type=button], #expand-button {
+    border-radius: 4px;
+    border: 1px solid white;
+    /*background-color: blue;*/
+    background-image: linear-gradient(to bottom right, #55A1FF, #0025B5);
+    color: white;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: inset 2px 2px 4px 1px #77A1F5;
+    padding:0;
+}
+#expand-button:disabled
 {
-        border-radius: 4px;
-        border: 2px solid white;
-        background-color: blue;
-        width: 30px;
-        height: 30px;
-        color: white;
-        font-size: 16px;
-        font-weight: 600;
-        text-align:center;
+   border-color:lightgray;
+}
+#window-control-buttons>#close-button
+{
+    background-image: linear-gradient(to bottom right, #C97475,#FF3010);
+    box-shadow: inset 2px 2px 4px 0px #C49A9B;
 }
 
-#client-rect
+
+#client-rect 
 {
     background: rgb(236,233,216);
-    display:flex;
-    flex-grow:1;
-    border:4px solid blue;
-    border-top:none;
-    flex-direction:column;
-}
-#client-rect>*
-{
-
+    display: flex;
+    flex-grow: 1;
+    border: 4px solid blue;
+    border-top: none;
+    flex-direction: column;
 }
 #menu-bar
 {
     display:flex;
-    /*margin:4px 0 4px;*/
-    margin:4px;
+    margin:0px;
     border-bottom:1px solid white;
-    flex-basis:7%;
+    flex-basis:9%;
     gap:5px;
 }
 #menu-bar>button
 {
     border:none;
     font-size:16px;
-    font-weight:600;
+    font-weight:400;
     background: rgb(236,233,216);
+}
+#menu-bar>button:hover
+{
+	background: rgb(49,106,197);
+    color:white;
+}
+#menu-bar>button:active
+{
+   box-shadow: inset 1px 1px 0 0 grey;
+   background: rgb(226,223,206);
 }
 #display
 {
     display:flex;
     flex-basis:10%;
-    margin:0 12px 0 12px;
+    margin:0 12px 4px 12px;
 
 }
-#display>input[type=text]
-{
-    flex-grow:1;
-    /*margin:0 8px 0 8px;*/
-    text-align:right;
-    font-size:16px;
-}
+    #display > input[type=text] {
+        flex-grow: 1;
+        text-align: right;
+        font-size: 16px;
+        border: 1px solid #7f9db9;
+    }
 .num-pad
 {
     display:flex;
     margin:14px;
     flex-direction:column;
     flex-grow:1;
-    gap:10px;
+    gap:15px;
+}
+.num-pad button
+{
+    border:solid 1px darkblue;
+    font-size:16px;
+    border-radius:4px;
+    padding:6px;
+    box-shadow: inset 0 -3px 3px 1px lightgrey;
+}
+.num-pad button:hover
+{
+    box-shadow:inset 0px -1px 2px 1.5px #e59900;
+}
+.num-pad button:active
+{
+    background-color: #e2e1d9;
+    box-shadow:inset 0px 0px 0px 1px grey;
 }
 #top-line
 {
     display:flex;
-    /*flex-grow:1;*/
+    flex-basis:16.5%;
     justify-content:space-between;
+
 }
 #top-line-button
 {
-   /*flex-grow:1;*/
-  flex-basis:80%;
+  flex-basis:82%;
    display:flex;
    gap:10px;
 }
-#top-line-button>button, #memory-line>button, #main-lain>button
+#top-line-button>button, #memory-line>button 
 {
     color:red;
-    font-size:18px;
-    border-width:1px;
-    border-radius:4px;
     flex-basis:0;
     flex-grow:1;
-    padding:6px;
+}
+#main-lain>button
+{
+    color: blue;
+}
+#main-lain>button.operation
+{
+    color:red;
 }
 #square 
 {
    border: inset 2px white;
-   flex-basis:8%;
+   flex-basis:10%;
    margin-left:5px;
 }
 #main-button
 {
     display:flex;
     flex-grow:1;
-    gap:20px;
+    gap:15px;
 }
 #memory-line 
 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex-basis:10%;
-    /*flex-grow:1;*/
-    /*height:100%;*/
+    flex-basis:14%;
     gap:10px;
 }
 #main-lain {

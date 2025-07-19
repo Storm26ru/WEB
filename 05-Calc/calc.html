@@ -15,8 +15,10 @@
                 </div>
                 <div id="window-control-buttons">
                     <input type="button" value="_" />
-                    <input type="button" />
-                    <input type="button" />
+                    <button id="expand-button" disabled>
+                        <div style="border:1px solid lightgrey; border-top:3px solid lightgrey; width:14px;height:12px; margin:6px;"></div>
+                    </button>
+                    <input id="close-button" type="button" value="✖" disabled />
                 </div>
             </div>
             <div id="client-rect">
@@ -48,23 +50,23 @@
                             <button>7</button>
                             <button>8</button>
                             <button>9</button>
-                            <button>/</button>
+                            <button class="operation">/</button>
                             <button>sqrt</button>
                             <button>4</button>
                             <button>5</button>
                             <button>6</button>
-                            <button>*</button>
+                            <button class="operation">*</button>
                             <button>%</button>
                             <button>1</button>
                             <button>2</button>
                             <button>3</button>
-                            <button>-</button>
-                            <button>1/X</button>
+                            <button class="operation">-</button>
+                            <button>1/x</button>
                             <button>0</button>
                             <button>+/-</button>
                             <button>.</button>
-                            <button>+</button>
-                            <button>=</button>
+                            <button class="operation">+</button>
+                            <button class="operation">=</button>
                         </div>
                     </div>
                 </div>
