@@ -13,6 +13,11 @@
     height:400px;
     display: flex;
     flex-direction: column;
+    /*margin:100px;*/
+    position:absolute;
+    top:200px;
+    left:400px;
+
 }
 
 #title-bar {
@@ -62,10 +67,18 @@
 {
    border-color:lightgray;
 }
+#window-control-buttons > input[type=button]:hover
+{
+    box-shadow: 0px 0px 6px 5px #04bbcc;
+}
 #window-control-buttons>#close-button
 {
     background-image: linear-gradient(to bottom right, #C97475,#FF3010);
     box-shadow: inset 2px 2px 4px 0px #C49A9B;
+}
+#window-control-buttons>#close-button:hover
+{
+    box-shadow: 0px 0px 6px 4px #f54040;
 }
 
 
