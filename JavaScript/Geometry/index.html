@@ -42,7 +42,7 @@
                             TASK_2: task_2,
                             TASK_3: task_0,
                             TASK_4: task_4,
-                            TASK_5: task_0,
+                            TASK_5: task_5,
                             TASK_6: task_0,
                             CHESS_1: Chess_1,
                             CHESS_2: Chess_2,
@@ -91,18 +91,47 @@
                         out += "</ol>";
                         return out;
                     }
+                    function task_3(num) {
+                        let out = "";
+                        for (let i = 0; i < num; i++) {
+                            out += "<div style=\"display: flex; flex - direction: row;\">";
+                            for (let j = 0; j < num; j++) {
+                                out += "<div style=\"width:30px; height:30px; text-align:center; font-size:24px;\">";
+                                (i + j == num - 1) || (i + j > num - 1) ? out += "*" : out += "&thinsp;";
+                                out += "</div>";
+                            }
+                            out += "</div>";
+                        }
+                        return out;
                     function task_4(num)
                     {
-                        let out = "<ol>";
+                        let out = "";
                         for (let i = 0; i < num; i++) {
-                            out += "<li>";
+                            out += "<div style=\"display: flex; flex - direction: row;\">";
                             for (let j = 0; j < num; j++)
                             {
-                                (i + j == num - 1) || (i + j > num - 1) ? out += "&thinsp;*" : out +="&thinsp;&nbsp;";
+                                out += "<div style=\"width:30px; height:30px; text-align:center; font-size:24px;\">";
+                                (i + j == num - 1) || (i + j > num - 1) ? out += "*" : out +="&thinsp;";
+                                out += "</div>";
                             }
-                            out += "</li>";
+                            out += "</div>";
                         }
-                        out += "</ol>";
+                        return out;
+                    }
+                    function task_5(num) {
+                        let out = "";
+                        for (let i = 0; i < num * 2; i++)
+                        {
+                            out += "<div style=\"display: flex; flex - direction: row;\">";
+                            for (let j = 0; j < num*2; j++)
+                            {
+                                out += "<div style=\"width:30px; height:30px; text-align:center; font-size:24px;\">";
+                                (i + num == j) || (j + num ==i) ? out += "\\" : (i==num-1-j||i-num+j==num*2-1) ? out +="/": out += "&thinsp;";
+                                
+                                out += "</div>";
+                            }
+                            out += "</div>";
+                        }
                         return out;
                     }
                     function Chess_2(num)
