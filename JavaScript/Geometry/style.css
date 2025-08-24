@@ -1,0 +1,21 @@
+﻿body 
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+main
+{
+    display:flex;
+    flex-direction:column;
+    
+}
+pre
+{
+    align-items:center;
+    align-self:center;
+    font-size:34px;
+}
+ol
+{
+    list-style:none;
+    font-size:24px;
+}

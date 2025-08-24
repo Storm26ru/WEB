@@ -6,26 +6,53 @@
     <title>WebForms</title>
 </head>
 <body>
-    <h1>WebForms</h1>
+    <h1 >WebForms</h1>
     <form action="/" method="post">
         <label for="base">Основание степени</label>
-        <input type="number" min="0" id="base" onchange="Power()" />
+        <!--<input type="number" min="0" id="base" onchange="Power()" />-->
+        <input type="number" min="0" id="base" onchange="Hard()" />
         <br />
 
         <label for="exponent">Показатель степени</label>
-        <input type="number" id="exponent" onchange="Power()">
+        <input type="number" id="exponent">
+       <!--<input type="number" id="exponent" onchange="Power()">-->
         <br />
 
         <div id="power"></div>
     </form>
     <script>
-        function Power()
-        {
-            let base = document.getElementById("base").value;
-            let exponent = document.getElementById("exponent").value;
-            document.getElementById("power").innerHTML = base**exponent;
+        //function Power()
+        //{
+        //    let base = document.getElementById("base").value;
+        //    let exponent = document.getElementById("exponent").value;
+        //    document.getElementById("power").innerHTML = base**exponent;
 
+        //}
+        function Hard()
+        {
+            let f = document.getElementById("exponent").value;
+            let n = document.getElementById("base").value;
+            for (let i = 0; i < n * n; i++)
+            {
+                for (let j = 0; j < n * n; j++)
+                {
+                    i / n && 1 != j / n && 1 ? document.write('-') : document.write('*');
+                }
+                document.writeln(" ");
+            }
         }
+        //function TASK_0()
+        //{
+        //    let n = document.getElementById("base").value;
+        //    for (let i = 0; i < n; i++)
+        //    {
+        //        for (let j = 0; j <= i; j++)
+        //        {
+        //            ;
+        //        }
+        //        //document.getElementById("power").innerHTML = document.writeln("");
+        //    }
+        //}
     </script>
 </body>
 </html>

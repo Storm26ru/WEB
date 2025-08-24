@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Geometry</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <h1 align ="center">Geometry</h1>
+    <main>
+        <div style="background-color:aqua">
+            <form  action="/" method="post" style="justify-self:center; flex-basis:30%">
+                <label for="size" style="margin:5px;">Введите размер:</label>
+                <input type="number" min="0" max="20" id="size" style="margin: 5px; border-color: transparent; background-color: aqua;" value="5" />
+                <label for="choice" style="margin:5px">Выберите фигуру:</label>
+                <select id="choice" name="choice" style="margin:5px; border-color:transparent; background-color:aqua; -webkit-appearance:none">
+                    <option value="TASK_0">TASK_0</option>
+                    <option value="TASK_1">TASK_1</option>
+                    <option value="TASK_2">TASK_2</option>
+                    <option value="TASK_3">TASK_3</option>
+                    <option value="TASK_4">TASK_4</option>
+                    <option value="TASK_5">TASK_5</option>
+                    <option value="TASK_6">TASK_6</option>
+                    <option value="CHESS_1">CHESS_1</option>
+                    <option value="CHESS_2">CHESS_2</option>
+                    <option value="PASCALES_TRIANGLE">PASCALES_TRIANGLE</option>
+                </select>
+                <!--<label for="symbol" style="margin:5px;">Введите символ:</label>
+                <input type="text" id="symbol" style="margin:5px; font-size:18px; border-color:transparent; background-color:aqua; width:50px"/>-->
+                <input type="button" value="Показать" onclick="Output(document.getElementById(`size`).value, document.getElementById(`choice`).value)" style="margin:0 0 0 40px" />
+            </form>
+        </div>
+           <div style="display:flex; flex-direction:column; align-items:center; background-color:black; color:white; flex-grow:1" id="Out"></div>
+   
+                <script>
+                    function Output(num,figure)
+                    {
+                        let functions = {
+                            TASK_0: task_0,
+                            TASK_1: task_1,
+                            TASK_2: task_2,
+                            TASK_3: task_0,
+                            TASK_4: task_4,
+                            TASK_5: task_0,
+                            TASK_6: task_0,
+                            CHESS_1: Chess_1,
+                            CHESS_2: Chess_2,
+                            PASCALES_TRIANGLE: Pascals_triangle
+                        }
+                        document.getElementById("Out").innerHTML = functions[figure](num);
+                    }
+                    function task_0(num)
+                    {
+                        let out = "<ol style=\"justify-items:center\">";
+                        for (let i = 0; i < num; i++)
+                        {
+                            out += "<li>";
+                                for (let j = 0; j < num; j++)
+                                {
+                                    out += "&nbsp*&nbsp ";
+                                }
+                            out+="</li>";
+                        }
+                        out += "</ol>";
+                        return out;
+                    }
+                    function task_1(num) {
+                        let out = "<ol>";
+                        for (let i = 0; i < num; i++) {
+                            out += "<li>";
+                            for (let j = 0; j <= i; j++)
+                            {
+                                out += "&nbsp*&nbsp";
+                            }
+                            out += "</li>";
+                        }
+                        out += "</ol>";
+                        return out;
+                    }
+                    function task_2(num) {
+                        let out = "<ol>";
+                        for (let i = 0; i < num; i++) {
+                            out += "<li>";
+                            for (let j = num; j > i; j--)
+                            {
+                                out += "&nbsp*&nbsp";
+                            }
+                            out += "</li>";
+                        }
+                        out += "</ol>";
+                        return out;
+                    }
+                    function task_4(num)
+                    {
+                        let out = "<ol>";
+                        for (let i = 0; i < num; i++) {
+                            out += "<li>";
+                            for (let j = 0; j < num; j++)
+                            {
+                                (i + j == num - 1) || (i + j > num - 1) ? out += "&thinsp;*" : out +="&thinsp;&nbsp;";
+                            }
+                            out += "</li>";
+                        }
+                        out += "</ol>";
+                        return out;
+                    }
+                    function Chess_2(num)
+                    {
+                        let out = "<ol style=\"justify - items: center\">";
+                        //let out = "";
+                        for (let i = 0; i < num * num; i++)
+                        {
+                            out += "<li>";
+                            for (let j = 0; j < num * num; j++)
+                            {
+                                (i / num & 1) != (j / num & 1) ? out += "&nbsp;&thinsp;&thinsp;&thinsp;&thinsp;" : out += "* &nbsp;&thinsp;";
+                            }
+                            out += "</li>";
+                        }
+                        out += "</ol>";
+                        return out;
+                    }
+                    function Pascals_triangle(num)
+                    {
+                        let out = "";
+                        for (let n = 0; n <= num; n++)
+                        {
+                            out += "<div style=\"display: flex; flex - direction: row\">";
+                            for (let k = 0; k <= n; k++)
+                            {
+                                k == 0 ? out += "<div style=\"width: 60px; height: 30px; text - align: center\">" : out += "<div style=\"width: 10px; height: 30px; text - align: center\"></div><div style=\"width: 60px; height: 30px; text - align: center\">";
+                                let a = 1, b = 1, c = 1;
+                                if (n != 0) for (let i = 1; i <= n; i++) a *= i; // факториал n - строки
+                                if (k != 0) for (let i = 1; i <= k; i++) b *= i; // факториал к - числа
+                                if (n - k != 0) for (let i = 1; i <= n - k; i++) c *= i; //факториал (n-k)
+                                out +=`${a/(b*c)}</div>`;
+                            }
+                            out+="</div>"
+                        }
+                        return out;
+                    }
+
+                    function Chess_1(num)
+                    {
+                        let out = "";
+                        out += `<ol id="chessBoard" style="display:grid; grid-template-columns:repeat(${num},1fr); grid-template-rows:repeat(${num},1fr); width:600px; height:600px; padding:2px; border:1px solid black; background-color:aqua">`;
+                        for (let i = 0; i < num; i++)
+                        {
+                            for (let j = 0; j < num; j++)
+                            {
+                                if ( i % 2 == 0) j % 2 == 0 ? out += "<li></li>" : out += "<li style=\"background-color:black\"></li>";
+                                else j % 2 == 0 ? out += "<li style=\"background-color:black\"></li>" : out += "<li></li>";
+                            }
+                        
+                        }
+                        out += "</ol>"
+                        return out;
+                    }
+                </script>
+       
+                <!--<ol id="output" style="justify-items:center"></ol>
+                <div id="chess_1" style="justify-items:center"></div>-->
+                <!--<ol id="chessBoard" style="display:grid; grid-template-columns:repeat(5,1fr); grid-template-rows:repeat(5,1fr); width:400px; height:400px; padding:2px; border:1px solid black; background-color:aqua">
+                    <li style="background-color:black"></li>
+                    <li></li>
+                    <li style="background-color:black"></li>
+                    <li></li>
+                    <li style="background-color:black"></li>
+                    <li></li>
+                    <li style="background-color:black"></li>
+                    <li></li>
+                    <li style="background-color:black"></li>
+                    <li></li>
+                    <li style="background-color:black"></li>
+                    <li></li>
+
+
+                </ol>-->
+       
+    </main>
+</body>
+</html>
