@@ -5,12 +5,19 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="style.css" />
     <title>WebForms</title>
+   
 </head>
 <body>
     <div id="header">
         Header
         <span id="mouse"></span>
-        <div id="switch-background" onclick="SwitchBackground()" style="background-image:url('img/moon.png')"></div>
+        <div style="display:flex; width:300px; justify-content:space-between">
+            <form style="display:flex; width:150px; justify-content:space-between; align-items:center">
+                <label for="duration">Duration</label>
+                <input type="number" min="1" id="duration" onchange="Duration()" style="width:30px; height:20px" />
+            </form>
+            <div style="width:120px"><div id="switch-background" onclick="SwitchBackground()"></div></div>
+        </div>
     </div>
     <h1 >WebForms</h1>
     <form action="/" method="post">
@@ -25,7 +32,6 @@
 
         <div id="power"></div>
     </form>
-   
     <script src="functions.js"> </script>
 </body>
 </html>

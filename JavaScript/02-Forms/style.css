@@ -1,9 +1,54 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
-body
+
+:root {
+    --text-color1: #000000;
+    --text-color2: #ffffff;
+    --duration: 5s;
+    --url:url("img/sun.png");
+    --left:70px;
+}
+
+@keyframes dark {
+    0% {color: var(--text-color1);}
+    100% {color: var(--text-color2);}
+}
+@keyframes white {
+    0% {color: var(--text-color1);}
+    100% {color: var(--text-color2);}
+}
+
+@keyframes imgLeft
 {
+    0%{left:0px;}
+    100%{left:var(--left);}
+}
+@keyframes imgRight
+{
+     0%{left:var(--left);}
+    100%{left:0px;}
+}
+
+body {
     font-family: Roboto Condensed;
     font-size: 32px;
-    background-image:linear-gradient(to right, wheat, lightblue);
+    transition-property: background-color;
+    transition-duration:var(--duration);
+ }
+.white {
+    --text-color1: #ffffff;
+    --text-color2: #000000;
+    background-color:#ffffff;
+    animation-name:white;
+    animation-duration:var(--duration);
+    animation-iteration-count:1;
+}
+.dark {
+    background-color:#000000;
+    color:#ffffff;
+    --url:url("img/moon.png");
+    animation-name:dark;
+    animation-duration:var(--duration);
+    animation-iteration-count:1;
 }
 #header
 {
@@ -14,6 +59,21 @@ body
 {
     width:32px;
     height:32px;
+    position:relative;
     background-size:32px;
-    background-image:url("img/moon.png");
+    background-image:var(--url);
+    transition-property: background-image;
+    transition-duration:var(--duration);
 }
+.left
+{
+    animation:imgLeft var(--duration);
+    animation-iteration-count:1;
+    left:var(--left);
+}
+.right {
+    animation: imgRight var(--duration);
+    animation-iteration-count: 1;
+}
+
+
