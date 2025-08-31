@@ -25,15 +25,4 @@ function SwitchBackground()
     let switchBackground = document.getElementById("switch-background");
     document.body.className == 'dark' ? (document.body.className = 'white', switchBackground.className = 'right')
                                       : (document.body.className = 'dark', switchBackground.className = 'left');
-   
-   // if (switchBackground.style.backgroundImage == 'url("img/moon1.png")')
-   // {
-        //switchBackground.style.backgroundImage = 'url("img/sun.png")';
-     //   document.body.className = 'white';
-   // }
-   // else
-   // {
-        //switchBackground.style.backgroundImage = 'url("img/moon1.png")';
-     //   document.body.className ='dark';
-   // }
 }
