@@ -3,7 +3,7 @@
 :root {
     --text-color1: #000000;
     --text-color2: #ffffff;
-    --duration: 5s;
+    --duration: 2s;
     --url:url("img/sun.png");
     --left:70px;
 }
