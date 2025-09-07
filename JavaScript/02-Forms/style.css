@@ -46,7 +46,7 @@ form {
 
 .pair {
     /*border:solid 1px;*/
-    width: 50%;
+   /* width: 50%;*/
     display: flex;
     justify-content: space-between;
     margin: 5px;
@@ -66,22 +66,34 @@ input[type=checkbox], input[type=radio] {
     height: 24px;
 }
 
-fieldset {
-    width: 46%;
+fieldset, select {
+    /*width: 46%;*/
+    margin:10px;
+   
 }
 
 #registration {
     display: flex;
+    justify-content:space-between;
+    
 }
 
-#upload-photo {
-    border: solid 1px;
-    width: 59vh;
-    height: 80vh;
-}
+/*#upload-photo {
+    border: solid 1px;*/
+   /* width: 59vh;
+    height: 80vh;*/
+/*}
 
     #upload-photo img {
-        border: solid 1px;
-        width: 38vh;
-        height: 58vh;
-    }
+        border: solid 1px;*/
+       /* width: 38vh;
+        height: 58vh;*/
+    /*}*/
+/*details summary::marker
+{
+    color:blueviolet;
+}
+details[open] summary::marker
+{
+    color:brown;
+}*/
